@@ -23,7 +23,7 @@ import {
 } from "./dom.js";
 
 export async function fetchUrl() {
-  let inputValue = input.value.toLowerCase();
+  let inputValue = input.value.toLowerCase().trim();
   inputValue = inputValue.replace(/\s+/g, "%20");
   let response;
   try {
