@@ -24,6 +24,7 @@ import {
 
 export async function fetchUrl() {
   let inputValue = input.value.toLowerCase();
+  inputValue = inputValue.replace(/\s+/g, "%20");
   let response;
   try {
     response = await axios.get(
