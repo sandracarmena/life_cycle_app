@@ -272,7 +272,7 @@ h1 {
   border-radius: 8px;
   color: #fefefe;
   border-radius: 8px;
-  width: 70%;
+  width: 68%;
   height: 150px;
   margin: 0;
 }
@@ -338,7 +338,7 @@ h1 {
     width: 40%;
   }
   .box-score {
-    width: 42% !important;
+    width: 40% !important;
   }
   .box-score #overall {
     font-size: 38px !important;
