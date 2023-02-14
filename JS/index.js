@@ -89,7 +89,7 @@ button.addEventListener("click", async function () {
   }
 
   let overall = overallScoreFunction();
-  overallScore.innerHTML = overall + "/10";
+  overallScore.innerHTML = +overall + "/10";
 
   console.log(overall);
 });

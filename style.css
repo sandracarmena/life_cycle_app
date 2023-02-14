@@ -25,52 +25,6 @@ body {
   padding-top: 100px;
 }
 
-.nav-bar {
-  width: 13%;
-  background: rgba(255, 255, 255, 0.6);
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  margin-bottom: 40px;
-  margin-top: 80px;
-}
-.nav-bar ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  padding: 0;
-}
-.nav-bar ul li {
-  margin: 20px 0;
-  font-size: 16px;
-  font-weight: 500;
-}
-.nav-bar ul li:hover {
-  padding: 10px 20px 10px 20px;
-  color: white;
-  border-radius: 4px;
-  background-color: rgb(0, 1, 37);
-  transition: 0.01s;
-}
-
-#active {
-  padding: 10px 30px 10px 30px;
-  color: white;
-  border-radius: 4px;
-  background-color: rgb(0, 1, 37);
-  transition: 0.01s;
-}
-
-#menu {
-  margin-top: 50px;
-}
-
-.search-box input {
-  width: 300px;
-  height: 50px;
-}
-
 #erreur {
   font-size: 15px;
   font-style: italic;
@@ -97,8 +51,8 @@ body {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   margin-top: 30px;
-  border: 1px solid #9a9a9a;
-  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid white;
+  background: white;
   padding-left: 40px;
   font-size: 16px;
 }
@@ -107,15 +61,16 @@ button {
   width: 80px;
   margin-top: 30px;
   height: 42px;
-  border: 1px solid #9a9a9a;
-  background-color: transparent;
+  border: 1px solid white;
+  background-color: white;
   border-left: 0;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 button i {
   font-size: 24px;
-  color: #333333;
+  color: #950def;
+  margin-right: 8%;
 }
 
 h1 {
@@ -150,22 +105,6 @@ h1 {
   font-size: 46px;
   margin-left: 80%;
   color: rgb(2, 147, 250);
-}
-
-#box, #box-2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.sg-box {
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 8px;
-  height: 200px;
-  width: 30%;
 }
 
 #mysection, #mysection2 {
@@ -203,7 +142,6 @@ h1 {
 
 .box-right .title-right {
   font-size: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
   text-align: left;
   margin-left: 20px;
@@ -211,7 +149,6 @@ h1 {
   height: fit-content;
   width: fit-content;
 }
-
 .box-right .indice {
   font-size: 30px;
   margin-left: 30px;
@@ -331,16 +268,22 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.4);
+  background: linear-gradient(-30deg, #2847d3, #6c7ddd, #ecb0f9, #567afe);
+  border-radius: 8px;
+  color: #fefefe;
   border-radius: 8px;
   width: 70%;
   height: 150px;
   margin: 0;
 }
-#mysection2 .box-score .indice {
-  font-size: 40px;
+#mysection2 .box-score #overall {
+  font-size: 60px;
   text-align: center;
   margin: auto;
+}
+#mysection2 .box-score .title-overall {
+  margin-left: 15%;
+  font-size: 30px;
 }
 
 @media only screen and (min-width: 620px) and (max-width: 830px) {
@@ -397,8 +340,9 @@ h1 {
   .box-score {
     width: 42% !important;
   }
-  .box-score p {
-    font-size: 26px !important;
+  .box-score #overall {
+    font-size: 38px !important;
+    margin-right: 10% !important;
   }
 }
 @media only screen and (min-width: 461px) and (max-width: 619px) {
@@ -458,8 +402,12 @@ h1 {
   .box-score {
     width: 34% !important;
   }
-  .box-score p {
-    font-size: 26px !important;
+  .box-score #overall {
+    font-size: 30px !important;
+    margin-right: 6% !important;
+  }
+  .box-score .title-overall {
+    font-size: 22px !important;
   }
 }
 @media only screen and (min-width: 350px) and (max-width: 460px) {
@@ -470,7 +418,7 @@ h1 {
     width: 60% !important;
   }
   .section-left {
-    width: 78% !important;
+    width: 82% !important;
     margin-left: auto !important;
     margin-right: auto !important;
     float: none;
@@ -517,14 +465,18 @@ h1 {
     width: 100% !important;
   }
   #mysection2 .box-right {
-    width: 35%;
+    width: 40% !important;
   }
   .box-score {
-    width: 38% !important;
+    width: 40% !important;
     height: 130px !important;
   }
-  .box-score p {
-    font-size: 20px !important;
+  .box-score #overall {
+    font-size: 30px !important;
+    margin-right: 6% !important;
+  }
+  .box-score .title-overall {
+    font-size: 17px !important;
   }
   i {
     font-size: 26px !important;
