@@ -79,7 +79,16 @@
   height: 50px;
  }
  
- 
+#erreur{
+  font-size: 15px;
+  font-style: italic;
+  color: red;
+  margin-top: 30px;
+  margin-left: 20%!important;
+  margin-right: 20%!important;
+  
+
+} 
  
  
  .search-box {
@@ -277,7 +286,7 @@
  }
  .fa-plane-departure{
   font-size: 34px;
-  margin-left: 68%;
+
   color: rgb(20, 0, 55);
  }
  .fa-graduation-cap{
@@ -335,7 +344,9 @@
   justify-content: center;
   gap: 20px;
   height: fit-content;
-  margin-bottom: 40px;
+  margin-bottom: 0!important;
+  margin-top: 0!important;
+  padding-bottom: 40px;
 
 
   .box-right{
@@ -522,9 +533,10 @@
 }
 
 @media only screen and (min-width: 350px) and (max-width: 460px){
+
+
   h1{
-    font-size: 19px;
-  
+    font-size: 20px;
   }
   
   .search-box{
@@ -589,9 +601,7 @@
   #mysection2{
     display: flex;
     width: 100% !important;
-    margin-bottom: 0!important;
-    margin-top: 0!important;
-    padding-bottom: 40px;
+   
      
    
 }
@@ -610,6 +620,7 @@
 i{
   font-size: 26px!important;
 }
+
 }
 
   

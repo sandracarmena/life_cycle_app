@@ -18,10 +18,12 @@ import {
   taxation,
   outdoors,
   environmentalQuality,
+  erreur,
+  overallScore,
 } from "./dom.js";
 
 export async function fetchUrl() {
-  let inputValue = input.value;
+  let inputValue = input.value.toLowerCase();
   let response;
   try {
     response = await axios.get(
@@ -33,18 +35,24 @@ export async function fetchUrl() {
   } catch (error) {
     console.error(error);
   }
+  erreur.innerHTML =
+    "City not recognized or not present, please try again !" +
+    " Remember that your city should be written in English.";
+  setTimeout(() => {
+    erreur.innerHTML = "";
+  }, 3000);
 }
 
 button.addEventListener("click", async function () {
-  let inputValue = input.value;
-  inputValue = inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
+  let originalInputValue = input.value;
+  input.value = input.value.charAt(0).toUpperCase() + input.value.slice(1);
   let response = await fetchUrl();
-  console.log(response.categories);
-
-  paragraph.innerHTML = "About " + inputValue;
-
   let city = new City(response);
 
+  paragraph.innerHTML =
+    "About " +
+    originalInputValue.charAt(0).toUpperCase() +
+    originalInputValue.slice(1);
   cityDescription.innerHTML = city.summary;
   housing.innerHTML = city.categories[0].score;
   travel.innerHTML = city.categories[4].score;
@@ -63,4 +71,32 @@ button.addEventListener("click", async function () {
   tolerance.innerHTML = city.categories[15].score;
   outdoors.innerHTML = city.categories[16].score;
   environmentalQuality.innerHTML = city.categories[10].score;
+
+  function overallScoreFunction() {
+    let sum = 0;
+    let categoryCount = 0;
+
+    for (let i = 0; i < city.categories.length; i++) {
+      if (city.categories[i].score && city.categories[i].score !== null) {
+        sum += Number(city.categories[i].score);
+        categoryCount++;
+      }
+    }
+
+    let overallScore = Math.round(sum / categoryCount);
+    return overallScore;
+  }
+
+  let overall = overallScoreFunction();
+  overallScore.innerHTML = overall + "/10";
+
+  console.log(overall);
 });
+
+document
+  .querySelector('input[type="text"]')
+  .addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      button.click();
+    }
+  });

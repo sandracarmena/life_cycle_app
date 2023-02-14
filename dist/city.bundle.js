@@ -16,7 +16,7 @@
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"City\": () => (/* binding */ City),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass City {\n  constructor(details) {\n    this.summary = details.summary;\n    this.categories = details.categories.map((category) => {\n      return {\n        name: category.name,\n        score: Number(category.score_out_of_10).toFixed(2),\n      };\n    });\n\n    this.categories.push({\n      name: \"Overall score\",\n      score: Number(details.score_out_of_10).toFixed(2),\n    });\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (City);\n\n\n//# sourceURL=webpack://webpack-demo/./JS/city.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"City\": () => (/* binding */ City),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass City {\n  constructor(details) {\n    this.summary = details.summary;\n    this.categories = details.categories.map((category) => {\n      return {\n        name: category.name,\n        score: Number(category.score_out_of_10).toFixed(2),\n      };\n    });\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (City);\n\n\n//# sourceURL=webpack://webpack-demo/./JS/city.js?");
 
 /***/ })
 

@@ -22,3 +22,4 @@ export const environmentalQuality = document.getElementById(
   "environmental-quality"
 );
 export const overallScore = document.getElementById("overall");
+export const erreur = document.getElementById("erreur");
