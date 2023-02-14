@@ -1,7 +1,7 @@
 import _ from "lodash";
 import axios from "axios";
 import City from "./city.js";
-import ".././style.css";
+import ".././CSS/style.css";
 
 import {
   input,
