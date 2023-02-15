@@ -20,6 +20,7 @@ import {
   environmentalQuality,
   erreur,
   overallScore,
+  safety,
 } from "./dom.js";
 
 // Function to reset the dashboard to its initial state
@@ -87,6 +88,7 @@ button.addEventListener("click", async function () {
     comute.innerHTML = "";
     businessFreedom.innerHTML = "";
     economy.innerHTML = "";
+    safety.innerHTML = "";
     internet.innerHTML = "";
     culture.innerHTML = "";
     tolerance.innerHTML = "";
