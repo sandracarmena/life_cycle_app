@@ -30,18 +30,18 @@ export async function fetchUrl() {
     response = await axios.get(
       "https://api.teleport.org/api/urban_areas/slug:" + inputValue + "/scores/"
     );
-
     response = response.data;
     return response;
   } catch (error) {
     console.error(error);
+    erreur.innerHTML =
+      "City not recognized or not present, please try again !" +
+      " Remember that your city should be written in English.";
+    setTimeout(() => {
+      erreur.innerHTML = "";
+    }, 3000);
+    return null;
   }
-  erreur.innerHTML =
-    "City not recognized or not present, please try again !" +
-    " Remember that your city should be written in English.";
-  setTimeout(() => {
-    erreur.innerHTML = "";
-  }, 3000);
 }
 
 button.addEventListener("click", async function () {
@@ -89,9 +89,11 @@ button.addEventListener("click", async function () {
   }
 
   let overall = overallScoreFunction();
-  overallScore.innerHTML = +overall + "/10";
 
-  console.log(overall);
+  setTimeout(() => {
+    overallScore.innerHTML = +overall + "/10";
+    console.log(overall);
+  }, 1000);
 });
 
 document
