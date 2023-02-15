@@ -18,6 +18,7 @@ The purpose is to practice all the elements learned in the module like Fetch API
 
 #### Here we have the Desktop version
 <img width="1219" alt="Capture d’écran 2023-02-15 à 03 27 13" src="https://user-images.githubusercontent.com/119263403/219005109-68f9daaf-e0c8-48ba-8448-cc63459ef6dd.png">
+
 ***
 
 ### Tech Stack 
