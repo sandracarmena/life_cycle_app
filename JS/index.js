@@ -22,6 +22,7 @@ import {
   overallScore,
 } from "./dom.js";
 
+// Function to reset the dashboard to its initial state
 export async function fetchUrl() {
   let inputValue = input.value.toLowerCase().trim();
   inputValue = inputValue.replace(/\s+/g, "%20");
@@ -72,6 +73,32 @@ button.addEventListener("click", async function () {
   tolerance.innerHTML = city.categories[15].score;
   outdoors.innerHTML = city.categories[16].score;
   environmentalQuality.innerHTML = city.categories[10].score;
+
+  function resetDashboard() {
+    paragraph.innerHTML = "About your city";
+    cityDescription.innerHTML = "";
+    housing.innerHTML = "";
+    travel.innerHTML = "";
+    healthcare.innerHTML = "";
+    education.innerHTML = "";
+    livingCost.innerHTML = "";
+    startup.innerHTML = "";
+    Venture.innerHTML = "";
+    comute.innerHTML = "";
+    businessFreedom.innerHTML = "";
+    economy.innerHTML = "";
+    internet.innerHTML = "";
+    culture.innerHTML = "";
+    tolerance.innerHTML = "";
+    taxation.innerHTML = "";
+    outdoors.innerHTML = "";
+    environmentalQuality.innerHTML = "";
+    overallScore.innerHTML = "";
+  }
+
+  input.addEventListener("input", function () {
+    resetDashboard();
+  });
 
   function overallScoreFunction() {
     let sum = 0;
